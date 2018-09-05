@@ -14,12 +14,14 @@ user_emails <- c(
 )
 
 SUBJECT  <- "Drunk History Submission Form"
-EMAIL_BODY <- {"Pleas make your submission by September 10, 2018
-Link to make your submission: www.drunkhistory.bscorwin.com/?group_code={group_code}&user_code={user_code}
+EMAIL_BODY <- {"Please make your submission by September 10, 2018
 
-Group code: {group_code}
-User code: {user_code}
-  "}
+Click <a href='www.drunkhistory.bscorwin.com/?group_code={group_code}&user_code={user_code}'>here</a> to make your submission.
+
+If the above link does not work go here: www.drunkhistory.bscorwin.com
+And use the following information:
+Group code = {group_code}
+User code = {user_code}"}
 # Helper functions --------------------------------------------------------
 
 gen_code <- function(n, len, prefix = "", use_digits = TRUE, use_chars = TRUE) {
