@@ -58,7 +58,7 @@ shinyServer(function(input, output) {
     send.mail(
       from = Sys.getenv("EMAIL_FROM"),
       to   = user_email,
-      subject = "Your Drunk History Submission",
+      subject = "Your Drunk History submission",
       body = glue("Thank you for your submission: {submission}"),
       smtp = list(host.name = "smtp.gmail.com", port = 465,
                   user.name = Sys.getenv("EMAIL_FROM"),

@@ -13,8 +13,9 @@ user_emails <- c(
   "bscorwin+5@gmail.com"
 )
 
-SUBJECT  <- "Drunk History Submission Form"
-EMAIL_BODY <- {"Please make your submission by September 10, 2018
+SUBJECT  <- "Drunk History topic submissions"
+SUBMISSION_DEADLINE <- as.Date("2018-09-10")
+EMAIL_BODY <- {"<b>Please make your submission by {format(SUBMISSION_DEADLINE, '%B %d, %Y')}</b>.
 
 Click <a href='www.drunkhistory.bscorwin.com/?group_code={group_code}&user_code={user_code}'>here</a> to make your submission.
 
@@ -22,6 +23,7 @@ If the above link does not work go here: www.drunkhistory.bscorwin.com
 And use the following information:
 Group code = {group_code}
 User code = {user_code}"}
+
 # Helper functions --------------------------------------------------------
 
 gen_code <- function(n, len, prefix = "", use_digits = TRUE, use_chars = TRUE) {
