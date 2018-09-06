@@ -6,7 +6,18 @@ library(mailR)
 
 readRenviron(".Renviron")
 
-shinyServer(function(input, output) {
+shinyServer(function(input, output, session) {
+
+  observe({
+    url_values <- parseQueryString(session$clientData$url_search)
+    url_params <- tolower(names(url_values))
+    if("group_code" %in% url_params) {
+      updateTextInput(session, "group_code", value = url_values[["group_code"]])
+    }
+    if("user_code" %in% url_params) {
+      updateTextInput(session, "user_code", value = url_values[["user_code"]])
+    }
+  })
 
   observeEvent(input$action_submit, {
     load("users.Rdata")

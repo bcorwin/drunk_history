@@ -1,6 +1,6 @@
 library(shiny)
 library(shinyjs)
-# To do: use UTM strings to input group and user codes
+
 shinyUI(fluidPage(
   useShinyjs(),
   titlePanel("Drunk History Submission Form"),
