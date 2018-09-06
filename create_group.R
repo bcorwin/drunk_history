@@ -15,14 +15,16 @@ user_emails <- c(
 
 SUBJECT  <- "Drunk History topic submissions"
 SUBMISSION_DEADLINE <- as.Date("2018-09-10")
-EMAIL_BODY <- {"<b>Please make your submission by {format(SUBMISSION_DEADLINE, '%B %d, %Y')}</b>.
-
-Click <a href='www.drunkhistory.bscorwin.com/?group_code={group_code}&user_code={user_code}'>here</a> to make your submission.
-
-If the above link does not work go here: www.drunkhistory.bscorwin.com
-And use the following information:
-Group code = {group_code}
-User code = {user_code}"}
+EMAIL_BODY <- {"
+<b>Please make your submission by {format(SUBMISSION_DEADLINE, '%B %d, %Y')}</b>.<br>
+<br>
+Click <a href='www.drunkhistory.bscorwin.com/?group_code={group_code}&user_code={user_code}'>here</a> to make your submission.<br>
+<br>
+If the above link does not work go here: www.drunkhistory.bscorwin.com<br>
+And use the following information:<br>
+Group code = {group_code}<br>
+User code = {user_code}
+"}
 
 # Helper functions --------------------------------------------------------
 
