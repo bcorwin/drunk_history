@@ -18,9 +18,9 @@ SUBMISSION_DEADLINE <- as.Date("2018-09-10")
 EMAIL_BODY <- {"
 <b>Please make your submission by {format(SUBMISSION_DEADLINE, '%B %d, %Y')}</b>.<br>
 <br>
-Click <a href='www.drunkhistory.bscorwin.com/?group_code={group_code}&user_code={user_code}'>here</a> to make your submission.<br>
+Click <a href='http://35.239.147.250:3838/?group_code={group_code}&user_code={user_code}'>here</a> to make your submission.<br>
 <br>
-If the above link does not work go here: www.drunkhistory.bscorwin.com<br>
+If the above link does not work go here: http://35.239.147.250:3838/<br>
 And use the following information:<br>
 Group code = {group_code}<br>
 User code = {user_code}
