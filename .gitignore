@@ -1,2 +1,3 @@
 .Renviron
 *.Rdata
+.Rproj.user
