@@ -61,7 +61,8 @@ if(file.exists("users.Rdata")) {
 }
 
 new_users <- data.frame(
-  email = user_emails
+  email = user_emails,
+  stringsAsFactors = FALSE
 ) %>%
   mutate(
     group_code = gen_code(4, prefix = "G", use_digits = FALSE),
