@@ -4,6 +4,7 @@ library(mailR)
 
 GROUP_CODE = "GPNRO"
 FORCE_SEND = FALSE # Force a send even if not all users have submitted
+CUR_TIME <- Sys.time()
 
 email_user <- function(email, assigned_topic) {
   send.mail(
@@ -44,7 +45,8 @@ if(any(is.na(assigned_topics$submission)) & FORCE_SEND != TRUE) {
     mutate(rand_val = runif(n())) %>%
     arrange(rand_val) %>%
     mutate(assigned_topic = coalesce(lead(submission), first(submission))) %>%
-    select(-created_at, -rand_val)
+    select(-created_at, -rand_val) %>%
+    mutate(created_at = CUR_TIME)
 
   apply(assigned_topics, 1, function(x) {
     email_user(email = x[["email"]],
@@ -52,3 +54,12 @@ if(any(is.na(assigned_topics$submission)) & FORCE_SEND != TRUE) {
   })
 }
 
+assigments <- tryCatch({
+  load("assigments.Rdata")
+  assigments %>%
+    bind_rows(assigned_topics)
+}, error = function(e) {
+  assigned_topics
+})
+
+save(assigments, file = "assigments.Rdata")

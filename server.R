@@ -59,13 +59,10 @@ shinyServer(function(input, output, session) {
       submissions %>%
         bind_rows(new_submission)
     }, error = function(x) {
-      print(x)
       new_submission
     })
 
     save(submissions, file = "submissions.Rdata")
-    print(user_email)
-    print(submission)
     send.mail(
       from = Sys.getenv("EMAIL_FROM"),
       to   = user_email,
