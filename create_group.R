@@ -8,9 +8,7 @@ readRenviron('.Renviron')
 user_emails <- c(
   "bscorwin+1@gmail.com",
   "bscorwin+2@gmail.com",
-  "bscorwin+3@gmail.com",
-  "bscorwin+4@gmail.com",
-  "bscorwin+5@gmail.com"
+  "amaadams2304@gmail.com"
 )
 
 SUBJECT  <- "Drunk History topic submissions"
