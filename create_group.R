@@ -15,7 +15,7 @@ user_emails <- c(
 
 SUBJECT  <- "Drunk History topic submissions"
 SUBMISSION_DEADLINE <- as.Date("2018-09-10")
-URL <- "http://35.239.147.250:3838"
+URL <- "http://drunkhistory.bcorwin.com/"
 EMAIL_BODY <- {"
 <b>Please make your submission by {format(SUBMISSION_DEADLINE, '%B %d, %Y')}</b>.<br>
 <br>
