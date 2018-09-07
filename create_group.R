@@ -15,12 +15,13 @@ user_emails <- c(
 
 SUBJECT  <- "Drunk History topic submissions"
 SUBMISSION_DEADLINE <- as.Date("2018-09-10")
+URL <- "http://35.239.147.250:3838"
 EMAIL_BODY <- {"
 <b>Please make your submission by {format(SUBMISSION_DEADLINE, '%B %d, %Y')}</b>.<br>
 <br>
-Click <a href='http://35.239.147.250:3838/?group_code={group_code}&user_code={user_code}'>here</a> to make your submission.<br>
+Click <a href='{URL}/?group_code={group_code}&user_code={user_code}'>here</a> to make your submission.<br>
 <br>
-If the above link does not work go here: http://35.239.147.250:3838/<br>
+If the above link does not work go here: {URL}<br>
 And use the following information:<br>
 Group code = {group_code}<br>
 User code = {user_code}
