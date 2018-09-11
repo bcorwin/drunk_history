@@ -6,12 +6,12 @@ library(mailR)
 readRenviron('.Renviron')
 
 user_emails <- c(
-  
+
 )
 
 SUBJECT  <- "Drunk History topic submissions"
 SUBMISSION_DEADLINE <- "noon on September 13, 2018"
-URL <- "http://drunkhistory.bcorwin.com/"
+URL <- "http://drunkhistory.bcorwin.com"
 EMAIL_BODY <- {"
 <b>Please make your submission by {SUBMISSION_DEADLINE}</b>.<br>
 <br>
