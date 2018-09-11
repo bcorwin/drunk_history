@@ -6,16 +6,14 @@ library(mailR)
 readRenviron('.Renviron')
 
 user_emails <- c(
-  "bscorwin+1@gmail.com",
-  "bscorwin+2@gmail.com",
-  "amaadams2304@gmail.com"
+  
 )
 
 SUBJECT  <- "Drunk History topic submissions"
-SUBMISSION_DEADLINE <- as.Date("2018-09-10")
+SUBMISSION_DEADLINE <- "noon on September 13, 2018"
 URL <- "http://drunkhistory.bcorwin.com/"
 EMAIL_BODY <- {"
-<b>Please make your submission by {format(SUBMISSION_DEADLINE, '%B %d, %Y')}</b>.<br>
+<b>Please make your submission by {SUBMISSION_DEADLINE}</b>.<br>
 <br>
 Click <a href='{URL}/?group_code={group_code}&user_code={user_code}'>here</a> to make your submission.<br>
 <br>
@@ -91,3 +89,5 @@ if(nrow(chk) == 0) {
 } else {
   stop("Duplicate codes. Please rerun.")
 }
+
+glue("Group code: {first(new_users$group_code)}")

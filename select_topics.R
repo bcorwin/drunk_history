@@ -2,8 +2,9 @@ library(dplyr)
 library(glue)
 library(mailR)
 
-GROUP_CODE = "GPNRO"
-FORCE_SEND = FALSE # Force a send even if not all users have submitted
+GROUP_CODE = ""
+# Force a send even if not all users have submitted
+FORCE_SEND = FALSE
 CUR_TIME <- Sys.time()
 
 email_user <- function(email, assigned_topic) {
